@@ -21,6 +21,7 @@ from Defs.ImportManager.unsorted_will_be_replaced import try_to_run_command
 
 default_palette = theme.default_palette
 
+
 def exit_message(port=80):  # Message when HiddenEye exit
     """Displays preconfigured message when HiddenEye execution ends or user tries to leave app.
 
@@ -66,7 +67,8 @@ def terms_of_service_message():
     agreement = license_handler()
     if not agreement:
         print(localization.lang_terms_of_service_message["GPL_3.0"])
-        print(localization.lang_terms_of_service_message["great_power_great_responsibility"])
+        print(
+            localization.lang_terms_of_service_message["great_power_great_responsibility"])
         print(localization.
               lang_terms_of_service_message["do_you_accept_license"])
         print(localization.
@@ -250,14 +252,16 @@ def verify_connection(
         elif internet_choice == "n":
             run_command("clear")
             print(global_localization.hidden_eye_logo)
-            print("                             " + global_localization.by_darksec)
+            print("                             " +
+                  global_localization.by_darksec)
             print("                       " +
                   global_localization.official_website_link)
             print(localization.lang_exit_message["help_to_improve_this_tool"])
             print(localization.lang_exit_message["tell_if_page_got_broken"])
             print(
                 localization.lang_exit_message["make_your_pull_request_or_issue"])
-            print(localization.lang_exit_message["small_disclaimer_suggestion"])
+            print(
+                localization.lang_exit_message["small_disclaimer_suggestion"])
             print(localization.lang_exit_message["forum_suggestion"])
             print(localization.lang_exit_message["financial_support"])
             print(localization.lang_exit_message["thank_you"])
